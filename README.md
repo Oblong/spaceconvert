@@ -2,6 +2,12 @@
 
 Convert from room + feld + (optionally) room proteins ==> space definition
 
+# Dependencies
+
+- node (`brew install node`)
+- run `npm install` in this directory
+
+
 # Usage
 
         ./spaceconvert.js [options]
