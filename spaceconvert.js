@@ -3,6 +3,8 @@
 ':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
 
+// (c) oblong industries
+
 const protein = require('proteinslurp');
 const space = require('spacedef');
 
