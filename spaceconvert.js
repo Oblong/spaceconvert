@@ -34,7 +34,7 @@ const optionDefinitions = [{
 
 
 const usage_doc_sections = [{
-    header: 'convert',
+    header: 'spaceconvert',
     content: 'Convert from room + feld + (optionally) room proteins ==> space definition'
 }, {
     header: 'Options',
@@ -54,23 +54,26 @@ try {
 
 if (!cmd_line_options.feld || !cmd_line_options.screen) {
     console.log(usage_doc);
-} else {
+    process.exit(1);
+} 
 
-    let room_protein, screen_protein, feld_protein;
+let room_protein, screen_protein, feld_protein;
 
-    if (cmd_line_options.room) {
-        protein.slurp_and_protein_parse(cmd_line_options.room, p => room_protein = p);
-    }
-    else { 
-        room_protein = space.default_room();
-    }
-
-    protein.slurp_and_protein_parse(cmd_line_options.screen, 
-        p => screen_protein = p);
-    protein.slurp_and_protein_parse(cmd_line_options.feld, 
-        p => feld_protein = p);
-
-    let s = space.convert_roomfeldscreen_to_space(room_protein, feld_protein,
-        screen_protein);
-    console.dir(s, {depth: null});
+if (cmd_line_options.room) {
+    protein.slurp_and_protein_parse(cmd_line_options.room, p => room_protein = p);
 }
+else { 
+    room_protein = space.default_room();
+}
+
+protein.slurp_and_protein_parse(cmd_line_options.screen, 
+    p => screen_protein = p);
+protein.slurp_and_protein_parse(cmd_line_options.feld, 
+    p => feld_protein = p);
+
+let s = space.convert_roomfeldscreen_to_space(room_protein, feld_protein,
+    screen_protein);
+
+//  output goes to stdout
+console.dir(s, {depth: null});
+

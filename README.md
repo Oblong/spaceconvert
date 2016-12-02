@@ -2,11 +2,9 @@
 
 Convert from room + feld + (optionally) room proteins ==> space definition
 
-# Dependencies
+# Installation
 
-- node (`brew install node`)
-- run `npm install` in this directory
-
+`npm install spaceconvert -g`
 
 # Usage
 
@@ -24,3 +22,4 @@ Options
                     Example: https://gist.github.com/sandover/b8a1ca0b039c8d882a9e3e98a2e6ea42    
 ```
 
+Output is sent to stdout in JSON format.

@@ -1,9 +1,13 @@
 {
   "name": "spaceconvert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert from feld/screen/room protein to space definition",
   "main": "spaceconvert.js",
+  "bin": {
+    "spaceconvert": "./spaceconvert.js"
+  },
   "author": "Brandon Harvey",
+  "license": "MIT",
   "dependencies": {
     "command-line-args": "^3.0.3",
     "command-line-usage": "^3.0.7",
