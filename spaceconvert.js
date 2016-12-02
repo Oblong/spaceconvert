@@ -46,10 +46,9 @@ const usage_doc = getUsage(usage_doc_sections)
 try {
     cmd_line_options = commandLineArgs(optionDefinitions)
 } catch (err) {
-    if (err.name != "UNKNOWN_OPTION") {
-        console.log(usage_doc);
-        throw (err);
-    }
+    console.error("Invalid input");
+    console.log(usage_doc);
+    process.exit(1);
 }
 
 if (!cmd_line_options.feld || !cmd_line_options.screen) {

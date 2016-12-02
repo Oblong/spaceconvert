@@ -1,6 +1,6 @@
 {
   "name": "spaceconvert",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert from feld/screen/room protein to space definition",
   "main": "spaceconvert.js",
   "bin": {
