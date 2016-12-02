@@ -8,6 +8,6 @@
     "command-line-args": "^3.0.3",
     "command-line-usage": "^3.0.7",
     "proteinslurp": "^1.0.0",
-    "spacedef": "^1.1.4"
+    "spacedef": "^1.1.8"
   }
 }
