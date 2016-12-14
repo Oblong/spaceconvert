@@ -56,19 +56,13 @@ if (!cmd_line_options.feld || !cmd_line_options.screen) {
     process.exit(1);
 } 
 
-let room_protein, screen_protein, feld_protein;
-
+let room_protein = space.default_room();
 if (cmd_line_options.room) {
-    protein.slurp_and_protein_parse(cmd_line_options.room, p => room_protein = p);
-}
-else { 
-    room_protein = space.default_room();
+    room_protein = protein.slurp_protein(cmd_line_options.room);
 }
 
-protein.slurp_and_protein_parse(cmd_line_options.screen, 
-    p => screen_protein = p);
-protein.slurp_and_protein_parse(cmd_line_options.feld, 
-    p => feld_protein = p);
+let screen_protein = protein.slurp_protein(cmd_line_options.screen);
+let feld_protein = protein.slurp_protein(cmd_line_options.feld);
 
 let s = space.convert_roomfeldscreen_to_space(room_protein, feld_protein,
     screen_protein);
