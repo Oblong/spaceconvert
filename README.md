@@ -8,7 +8,7 @@ Convert from room + feld + (optionally) room proteins ==> space definition
 
 ## Usage
 
-        spaceconvert [options]
+    spaceconvert [options]
 
 
 ```
