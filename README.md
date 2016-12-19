@@ -2,13 +2,13 @@
 
 Convert from room + feld + (optionally) room proteins ==> space definition
 
-# Installation
+## Installation
 
 `npm install spaceconvert -g`
 
-# Usage
+## Usage
 
-        ./spaceconvert.js [options]
+        spaceconvert [options]
 
 
 ```
@@ -23,3 +23,10 @@ Options
 ```
 
 Output is sent to stdout in JSON format.
+
+
+## Example
+
+`spaceconvert --feld=hexfeld.protein --screen=hexscreen.protein`
+
+
