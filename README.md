@@ -22,7 +22,7 @@ Options
                     Example: https://gist.github.com/sandover/b8a1ca0b039c8d882a9e3e98a2e6ea42    
 ```
 
-Output is sent to stdout in JSON format.
+Output is sent to stdout in YAML format.
 
 
 ## Example

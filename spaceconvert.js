@@ -7,7 +7,7 @@
 
 const protein = require('proteinslurp');
 const space = require('spacedef');
-
+const yamljs = require('yamljs');
 
 // -----------------------------
 // Parse command line args
@@ -54,7 +54,7 @@ try {
 if (!cmd_line_options.feld || !cmd_line_options.screen) {
     console.log(usage_doc);
     process.exit(1);
-} 
+}
 
 let room_protein = space.default_room();
 if (cmd_line_options.room) {
@@ -68,5 +68,4 @@ let s = space.convert_roomfeldscreen_to_space(room_protein, feld_protein,
     screen_protein);
 
 //  output goes to stdout
-console.dir(s, {depth: null});
-
+console.log(yamljs.stringify(s, 3, 2));
